@@ -1,0 +1,34 @@
+Code Comparison
+
+a. Names
+    ChatGPT
+    Google Gemini
+
+b. How I accessed them
+    Accessed both through a web browser using their websites.
+
+c. Promp Used -> in another text file.
+
+d. Original code given within their respective folders
+
+e. code analysis
+    Correctness:
+        For the version printed out by ChatGPT, it correctly found all solutions to the given puzzles, while finding no solution for 4
+        and 2 solutions for 5.
+        Gemini, on the other hand, found everything up to 4 correctly, but only found a single solution for puzzle 5.
+    Execution Time:
+        Both programs use recursive backtracking, meaning they try possible digits in empty cells and move forward when a digit is valid.
+        ChatGPT continues searching after finding a solution so that it can find every solution. While this requires more execution time, it ensures everything is correct.
+        Gemini, though, stops after finding the first solution. While this can be faster when only a single solution is needed, it fails to meet all the requirements for "all solutions"
+    Space Complexity:
+        Both programs store the Sudoku board in a fixed 9 x 9 array and use recursion to explore possible solutions.
+        ChatGPT uses a constant sized board storage for a standarad puzzle, plus a recursion stack of at most 81 cell positions.
+        Gemini also uses a fixed board and recursive calls, so its auxiliary space is the same.
+    Maintainability:
+        The ChatGPT code seperates important operations into methods, including checking whether a digit is valid, loading a puzzle, printing a board, and performing recursive solving
+        The Gemini code is much shorter and uses more straightforward methods that makes the basic algorithm easy to follow. However, the file-loading and solution searching methods need improvements.
+
+f. Selected program
+    I chose to go with ChatGPT's program as the final. While both programs successfully solve the puzzles that have solutions, ChatGPT's version can print the multiple solutions needed for puzzle 5.
+    It also requires fewer changes to meet the assignment requirements
+
